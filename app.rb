@@ -14,8 +14,8 @@ option = gets.chomp.to_i
 if option == 1
     puts('Lista de Idiomas:')
     puts('1 - Português do Brasil')
-    puts('2 - Inglês (Estados Unidos / Internacional)')
-    puts('3 - Chinês (Simplificado)')
+    puts('2 - Inglês')
+    puts('3 - Chinês')
     puts('4 - Alemão')
 
     print("Qual o idioma que você deseja escrever sua mensagem?: ")
@@ -29,12 +29,12 @@ if option == 1
     numero_traduz = gets.chomp.to_i
     idioma_traduz = list_idioma[numero_traduz]
 
-    tradutor = Traducao.new
-    resultado = tradutor.traduzir(mensagem, idioma_atual, idioma_traduz)
+    traduz = Traduzir.new
+    traducao = traduz.tradutor(mensagem, idioma_atual, idioma_traduz)
 
     puts "Traduçao: "
     puts mensagem
-    puts resultado
+    puts traducao
 
 else
     puts "Volte sempre!"
